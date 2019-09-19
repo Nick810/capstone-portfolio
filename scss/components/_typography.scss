@@ -1,0 +1,118 @@
+// ======================================
+//  Typography
+// ======================================
+
+// Web Fonts
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+//
+
+.text {
+  &-logo {
+    margin-left: em(8);
+  }
+  &-burger {
+    font-size: em(12);
+    color: $button-accent;
+    margin-top: em(7);
+    transition: opacity 0.4s ease-out;
+  }
+  &-main {
+    color: $white;
+    font-size: em(55);
+    text-align: center;
+    word-break: break-all;
+    margin-top: em(21);
+    &-heading {
+      color: $button-color;
+      margin-bottom: em(17);
+    }
+    &-paragragh {
+      text-align: center;
+      margin-top: em(24);
+      line-height: 3;
+      &.second {
+        line-height: 2.4;
+        margin-top: em(48);
+      }
+      &.third {
+        color: $button-color;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    &-small {
+      margin: em(48) 0;
+      font-size: em(16);
+      text-align: center;
+    }
+    &.footer {
+      margin-top: 0;
+      font-size: em(48);
+      padding: em(21) em(12) 0 em(12);
+    }
+  }
+  &-phone-num {
+    margin-top: em(15);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &-copyright {
+    font-size: em(16);
+    margin-top: em(20);
+  }
+}
+
+.card-heading {
+  font-size: em(24);
+  color: $button-accent;
+  @include media-q(large) {
+    font-size: em(17);
+  }
+}
+
+.text-overlay-heading {
+  margin: auto;
+  transform: translateY(em(-20));
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.footer-heading {
+  color: $white;
+}
+
+.current-page {
+  pointer-events: none;
+  color: $button-color;
+}
+
+#check-project {
+  font-size: em(17);
+  color: #2e9cca;
+  text-decoration: underline;
+  @include media-q(medium) {
+    font-size: em(21)
+  }
+}
+
+.contact-heading {
+  font-size: em(34);
+  line-height: 1.5;
+  color: $white;
+  margin-bottom: em(17);
+}
+
+.contact-footer-heading {
+  color: $white;
+}
+
+.welcome-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  // transform: translate(-50%, -100%);
+  z-index: 9001;
+}

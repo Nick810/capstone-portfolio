@@ -1,0 +1,56 @@
+// ======================================
+//  Icons
+// ======================================
+
+.icon {
+  &-burger {
+    width: 100%;
+    height: em(4);
+    background: $white;
+    border-radius: em(10);
+    &.burg-top {
+      transition: all 0.7s;
+      transition-timing-function: cubic-bezier(.99,.46,.37,1);
+      margin: em(20) 0 0 0;
+    }
+    &.burg-middle {
+      transition: opacity 0.3s;
+      margin: em(5) 0;
+    }
+    &.burg-bottom {
+      transition: all 0.7s;
+      transition-timing-function: cubic-bezier(.99,.46,.37,1);
+    }
+  }
+  &-skill {
+    width: em(40);
+    margin: 0 em(10);
+  }
+  &__social {
+    width: em(45);
+    margin: 0 em(15);
+    &.sidebar {
+      width: em(30);
+      margin: em(15) 0;
+    }
+  }
+  &__arrow-down {
+    width: em(34);
+    height: em(40);
+    display: block;
+    margin: em(21) auto 0 auto;
+    cursor: pointer;
+    transition: all 0.7s ease-out;
+    animation: updown 1s infinite alternate;
+    &.path {
+      fill: $white;
+    }
+  }
+}
+
+.social-links {
+  transition: fill 0.3s ease-out;
+  &:hover {
+    fill: #2E9CCA;
+  }
+}

@@ -1,0 +1,298 @@
+// ======================================
+//  Container
+// ======================================
+
+.container {
+  &__main-wrap {
+    transition: opacity 0.7s ease-out;
+    opacity: 0;
+  }
+  &__door {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 9000;
+  }
+  &__fixed-top {
+    background: $primary-color;
+    position: fixed;
+    width: 100%;
+    z-index: 4000;
+    border-radius: 1px;
+    transition: box-shadow 0.4s ease-out;
+  }
+  &__header {
+    background: $primary-color;
+    max-width: $max-width; // comeb ack and change this please***
+    margin: 0 auto;
+    @include flex(flex, row, null, null, space-between);
+  }
+  &__burger-menu {
+    margin: 0 em(16) auto 0;
+    cursor: pointer;
+    @include media-q(large) {
+      display: none;
+    }
+  }
+  &__header-menu {
+    display: none;
+    @include media-q(large) {
+      @include flex(flex, row, null, null, null)
+    }
+    & li {
+      margin: auto 0;
+      padding: 0 em(20);
+    }
+    &-links {
+      color: $white;
+    }
+  }
+  &__mobile-nav {
+    position: fixed;
+    top: 80px;
+    z-index: 2000;
+    height: 100%;
+    width: 100%;
+    background-color: $primary-color;
+    visibility: hidden;
+    transform: translateY(em(40));
+    opacity: 0;
+    transition: all 0.7s;
+    @include flex(flex, column, null, null, center)
+    & li {
+      margin: em(20) auto;
+      &:last-child {
+        margin-bottom: em(84);
+        padding: em(10) em(30);
+        border: em(2) solid $button-color;
+        border-radius: em(16);
+        transition: background-color 0.4 ease-out;
+        &:hover {
+          background-color: #2389ce;
+        }
+        & a {
+          color: $button-color;
+          transition: color 0.4s ease-out;
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+      & a {
+        transition: color 0.4s ease-out;
+        &:hover {
+          color: $button-color;
+        }
+      }
+    }
+    &-links {
+      color: $white;
+      transition: opacity 0.7s;
+      opacity: 1;
+    }
+  }
+  &__main {
+    background: $primary-color;
+    padding: 79px em(12) 0 em(12);
+    &-card {
+      &-inner {
+        text-align: center;
+        @include flex(flex, column, null, null, null);
+        @include media-q(large) {
+          flex-direction: row;
+        }
+      }
+    }
+  }
+  &__skill-container {
+    @include flex(flex, row, null, null, space-around);
+  }
+  &__inner {
+    max-width: 1150px; // comeb ack and change this please***
+    margin: 0 auto;
+  }
+  &__footer {
+    background: $primary-color;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    transition: all 1s ease-out;
+    @include media-q(large) {
+      padding-top: em(40);
+    }
+    &-text-top {
+      font-size: em(24);
+      padding: em(30) 0 em(55) 0;
+      & * {
+        margin: em(15) em(20);
+      }
+    }
+    &-text-bottom {
+      padding: em(25) 0;
+      @include flex(flex, row, null, null, space-around);
+    }
+  }
+  &__sidebar {
+    width: em(32);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+    transition: opacity 0.7s;
+    visibility: hidden;
+    @include flex(flex, column, null, null, null);
+  }
+  &__contact-heading {
+    text-align: center;
+    margin: em(60) 0;
+  }
+  &__form {
+    padding-bottom: em(20);
+    &-group {
+      @include flex(flex, column, null, null, null);
+      @include media-q(large) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    &-textarea {
+      @include media-q(large) {
+        margin: 0 em(10);
+      }
+    }
+    &-button {
+      text-align: center;
+    }
+  }
+  &__modal-video {
+    position: fixed;
+    z-index: 8002;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: background-color 0.7s ease-out;
+    background-color: rgba(1,1,1,0);
+  }
+  &-button {
+    @include flex(flex, row, null, null, space-between);
+  }
+}
+
+.input-wrap {
+  @include media-q(large) {
+    flex: 1;
+    margin: 0 em(10);
+  }
+}
+
+.image-project-container {
+  position: relative;
+  overflow: hidden;
+  transition: 1s box-shadow ease-out;
+  margin-bottom: em(55);
+  @include media-q(large) {
+    margin-left: em(20);
+    width: 180%;
+    height: 100%;
+  }
+}
+
+.text-overlay {
+  background-color: rgba(1,1,1,0);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: $white;
+  cursor: pointer;
+  display: flex;
+  visibility: hidden;
+  transition: background-color 0.3s ease-out;
+}
+
+.hr {
+  border: em(1) solid #AAABB8;
+  transition: opacity 0.7s ease-out;
+}
+
+.icon-skill-wrap {
+  border-radius: 50%;
+  padding: em(10);
+}
+
+.has-shadow {
+  -webkit-box-shadow:  0 em(4) em(3) 0 rgba(0,0,0,0.5);
+  -moz-box-shadow:  0 em(4) em(3) 0 rgba(0,0,0,0.5);
+  box-shadow: 0 em(4) em(3) 0 rgba(0,0,0,0.5);
+}
+
+.box1,
+.box2,
+.box3,
+.box4 {
+  height: 25%;
+  width: 100%;
+  background: #464866;
+  transition: 0.7s ease-out;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#card-wrap {
+  height: 100%;
+  margin-top: em(55);
+  transform: translateY(em(40));
+  transition: all 1s ease-out;
+  opacity: 0;
+}
+
+.video-test-container {
+  width: 94%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video {
+  transform: translateY(em(-40));
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+#card-wrap-test {
+  height: 300vh;
+  transition: all 1s ease-out;
+}
+
+.card-text {
+  margin: em(34) 0;
+  line-height: 1.5;
+  @include media-q(large) {
+    font-size: em(13);
+  }
+}
+
+.container-card-text {
+  margin: 0 em(34);
+}
+
+#top-wrap {
+  transition: all 0.7s ease-out;
+}
+
+.fade-out {
+  transition: all 0.7s ease-out;
+}
+
+.image-shadow {
+  -webkit-box-shadow: 0 0 em(30) em(3) rgba(0,0,0,0.75);
+  -moz-box-shadow: 0 0 em(30) em(3) rgba(0,0,0,0.75);
+  box-shadow: 0 0 em(30) em(3) rgba(0,0,0,0.75);
+}

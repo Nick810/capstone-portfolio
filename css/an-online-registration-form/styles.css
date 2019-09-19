@@ -1,0 +1,266 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+}
+
+h1 {
+  margin: 0;
+  padding: 30px;
+  background: #2D3945;
+  color: white;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+h2 {
+  color: #2D3945;
+  font-size: 1.15em;
+  font-weight: 700;
+  padding-top: 30px;
+}
+
+h4 {
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+main {
+  background: #f2f7f7;
+}
+
+footer {
+  text-align: center;
+  font-style: italic;
+  color: #d7d9db;
+  padding-bottom: 150px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  border-radius: 5px;
+  padding: 15px;
+  width: 100%;
+  display: inline-block;
+  background-color: #e8eeef;
+  color: #2D3945;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  margin-bottom: 15px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"]#zip-code::placeholder {
+  font-style: italic;
+  color: #cecece;
+  font-size: 0.5em;
+}
+
+input[type="text"]#name::placeholder,
+input[type="text"]#city::placeholder,
+input[type="text"]#address::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder {
+  text-align: right;
+  font-style: italic;
+  color: #cecece;
+  font-size: 0.5em;
+}
+
+input[type="text"]#zip-code {
+  width: 50%;
+  display: block;
+  margin-bottom: 30px;
+}
+
+form input:focus {
+  transition: 0.5s ease-in-out;
+  border: 2px solid #2D3945;
+  background-color: #a5a9aa;
+}
+
+label {
+  display: inline-block;
+  padding-bottom: 10px;
+  color: #a5a5a5;
+  font-size: 14px;
+}
+
+fieldset {
+  border: none;
+  padding: 0 12px;
+}
+
+select {
+  padding: 6px;
+  height: 50px;
+  font-size: 14px;
+  text-indent: 0.5em;
+  color: #cecece;
+}
+
+textarea {
+  margin-top: 10px;
+}
+
+textarea::placeholder {
+  font-style: italic;
+  color: #cecece;
+  font-size: 0.5em;
+}
+
+button {
+  font-size: 1.15em;
+  color: white;
+  background-color: #4EBBB5;
+  border-radius: 5px;
+  width: 100%;
+  padding: 16px 39px 17px 39px;
+  margin-top: 10px;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Layout Containers ---- */
+
+.container {
+  text-align: center;
+  padding: 0 15px;
+}
+
+/* ---- Page Elements ---- */
+
+.heading {
+  color: #2D3945;
+  font-size: 1.10em;
+  font-weight: bold;
+  padding: 20px 0 25px 0;
+}
+
+.thick-hr {
+  border-top: 5px solid #2D3945;
+}
+
+.thin-hr {
+  margin-top: 3px;
+  margin-bottom: 10px;
+  border-top: 3px solid #2D3945;
+}
+
+.form-hr {
+  border-top: 2px solid #2D3945;
+}
+
+.heading {
+  margin-top: 25px;
+}
+
+.msg-heading {
+  margin-top: 10px;
+}
+
+#sub-header {
+  font-size: 14px;
+  color: #cecece;
+  margin-top: -5px;
+  margin-bottom: 40px;
+}
+
+#newsletter-label {
+  margin-bottom: 10px;
+}
+
+#news {
+  margin: 10px 0;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 786px) {
+  .main-wrapper {
+    width: 60%;
+    margin: 0 auto;
+  }
+  h2 {
+    font-size: 23px;
+    padding-top: 60px;
+  }
+  h4 {
+    font-size: 14px;
+    padding-top: 10px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="tel"],
+  textarea,
+  select {
+    margin-bottom: 25px;
+  }
+  input[type="text"]#zip-code {
+    width: 25%;
+    display: inline-block;
+    margin-bottom: 60px;
+  }
+  input[type="text"]#name::placeholder,
+  input[type="email"]::placeholder {
+    font-size: 0.5em;
+  }
+  button {
+    padding: 19px 39px 18px 39px;
+    color: white;
+    background-color: #4EBBB5;
+    font-size: 1.25em;
+    text-align: center;
+    border-radius: 5px;
+    width: 100%;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+  }
+  form input,
+  form select {
+    max-width: 68%;
+    display: inline-block;
+  }
+  form label {
+    width: 25%;
+    margin-right: 20px;
+    font-size: 14px;
+  }
+  .heading {
+    padding: 40px 0 25px 0;
+  }
+  .msg-heading {
+    width: 100%;
+  }
+  #newsletter-label {
+    width: 100%;
+  }
+  #news {
+    width: 100%;
+  }
+}

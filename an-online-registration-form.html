@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>An Online Registration Form</title>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900&display=swap" rel="stylesheet">
+  <link href="css/an-online-registration-form/styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>THE CODE REVIEW</h1>
+  </header>
+  <!-- Main Form -->
+  <main class="main-wrapper">
+    <form action="index.html" method="post">
+      <div class="container">
+        <h2>Signup for our newsletter</h2>
+        <p id="sub-header">Get the latest news on how your code is doing right in your inbox</p>
+
+        <div class="thick-hr"></div>
+        <div class="thin-hr"></div>
+      </div>
+
+      <fieldset>
+        <legend class="heading">Contact Information</legend>
+
+        <label for="name">Full Name</label>
+        <input required type="text" id="name" name="user_name" placeholder="Required">
+
+        <label for="mail">Email Address</label>
+        <input required type="email" id="mail" name="user_email" placeholder="Required">
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="user_phone" placeholder="123-456-7890" maxlength="15">
+
+        <label for="address">Street Address</label>
+        <input type="text" id="address" name="user_address" placeholder="House No | Street Address | Near To | Area | Pin Code">
+
+        <label for="city">City</label>
+        <input type="text" id="city" name="usercity" placeholder="New York">
+
+        <label for="states">State</label>
+        <select id="states" name="user_states">
+          <option value="" disabled selected>Choose State</option>
+          <option value="alabama">Alabama</option>
+          <option value="alaska">Alaska</option>
+          <option value="arizona">Arizona</option>
+          <option value="arkansas">Arkansas</option>
+          <option value="california">California</option>
+          <option value="colorado">Colorado</option>
+          <option value="connecticut">Connecticut</option>
+          <option value="delaware">Delaware</option>
+          <option value="district_of_columbia">District of Columbia</option>
+          <option value="florida">Florida</option>
+          <option value="georgia">Georgia</option>
+          <option value="hawaii">Hawaii</option>
+          <option value="idaho">Idaho</option>
+          <option value="illinois">Illinois</option>
+          <option value="indiana">Indiana</option>
+          <option value="iowa">Iowa</option>
+          <option value="kansas">Kansas</option>
+          <option value="kentucky">Kentucky</option>
+          <option value="louisiana">Louisiana</option>
+          <option value="maine">Maine</option>
+          <option value="maryland">Maryland</option>
+          <option value="massachusetts">Massachusetts</option>
+          <option value="michigana">Michigan</option>
+          <option value="minnesota">Minnesota</option>
+          <option value="mississippi">Mississippi</option>
+          <option value="montana">Montana</option>
+          <option value="nebraska">Nebraska</option>
+          <option value="nevada">Nevada</option>
+          <option value="new_hampshire">New Hampshire</option>
+          <option value="new_jersey"> New Jersey</option>
+          <option value="new_mexico">New Mexico</option>
+          <option value="new_york">New York</option>
+          <option value="north_carolina">North Carolina</option>
+          <option value="north_dakota">North Dakota</option>
+          <option value="ohio">Ohio</option>
+          <option value="oklahoma">Oklahoma</option>
+          <option value="oregon">Oregon</option>
+          <option value="pennsylvania">Pennsylvania</option>
+          <option value="rhode_island">Rhode Island</option>
+          <option value="south_carolina">South Carolina</option>
+          <option value="south_dakota">South Dakota</option>
+          <option value="tennessee">Tennessee</option>
+          <option value="texas">Texas</option>
+          <option value="utah">Utah</option>
+          <option value="vermont">Vermont</option>
+          <option value="virginia">Virginia</option>
+          <option value="washington">Washington</option>
+          <option value="west_virginia">West Virginia</option>
+          <option value="wisconsin">Wisconsin</option>
+          <option value="wyoming">Wyoming</option>
+        </select>
+
+        <label for="zip-code">Zip Code</label>
+        <input type="text" id="zip-code" name="user_zip-code" pattern="[0-9]{5}"  placeholder=" 12345" maxlength="5">
+
+        <div class="form-hr"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend class="heading">Newsletter</legend>
+
+        <label id="newsletter-label">select the newsletters you would like to recieve</label><br>
+        <input type="checkbox" id="html_news" name="user_newsletter_type"  value="html_news" checked><label for="html_news">HTML News</label><span class="checkmark"></span><br>
+
+        <input type="checkbox" id="css_news" name="user_newsletter_type" value="css_news"><label for="css_news">CSS News</label><br>
+        <input type="checkbox" id="javascript_news" name="user_newsletter_type" value="javascript_news"><label for="javascript_news">Javascript News</label><br>
+
+        <label id="news">Newsletter format</label>
+        <div>
+          <input type="radio" name="format" value="html"><label>HTML</label>
+        </div>
+        <div>
+          <input type="radio" name="format" value="plain_text"><label>Plain text</label>
+        </div>
+
+        <label for="msg" class="msg-heading">Other topics you'd like to hear about</label>
+        <textarea id="msg" rows="4" name="user_msg" placeholder="Type your other interested topics here"></textarea>
+
+        <button type="submit">Sign Up</button>
+      </fieldset>
+    </form>
+  </main>
+  <!-- Footer -->
+  <footer>
+    <h4 class="copyright">Copyright The Code Review</h4>
+  </footer>
+</body>
+</html>
