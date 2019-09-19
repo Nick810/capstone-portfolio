@@ -28,7 +28,6 @@ const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
 const textareaInput = document.getElementById('message');
 const submitButton= document.getElementById('form-button');
-const viewWork = document.getElementById('view-work');
 const door = document.querySelector('.container__door');
 const box1 = document.querySelector('.box1');
 const box2 = document.querySelector('.box2');
@@ -720,11 +719,5 @@ if (select) {
   select.addEventListener('change', () => {
     const userChoice = select.selectedIndex;
     localStorage.setItem('heard about me', userChoice);
-  });
-}
-
-if (viewWork) {
-  viewWork.addEventListener('click', ()=> {
-    window.location.href = 'https://nick810.github.io/capstone-portfolio/';
   });
 }
