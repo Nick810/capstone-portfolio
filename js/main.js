@@ -725,6 +725,6 @@ if (select) {
 
 if (viewWork) {
   viewWork.addEventListener('click', ()=> {
-    window.location.href = 'file:///Users/NICK/Documents/GitHub/Front-End-Development/capstone-portfolio-project9/index.html#card-wrap-test';
+    window.location.href = 'http://nick810.github.io/capstone-portfolio';
   });
 }
