@@ -379,7 +379,8 @@ window.onresize = () => {
   const currentPage = document.body.getAttribute('data-page');
   if (currentPage === 'home') {
     if (cardWrapTest.firstElementChild.childElementCount === 1) {
-      cardWrapTest.style.height = getMainCardHeight();
+//       cardWrapTest.style.height = getMainCardHeight();
+      cardWrapTest.style.height = '100%';
       cardWrapTest.firstElementChild.style.height = '100%';
     }
   }
