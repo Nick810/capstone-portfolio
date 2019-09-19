@@ -182,6 +182,11 @@ function refreshingPage() {
   mainWrap.style.opacity = '1';
 }
 
+function showFooter() {
+  footerFade[0].style.transform = 'translateY(0)';
+  footerFade[0].style.opacity = '1';
+}
+
 
 (function () {
   let _clientY = null;
@@ -371,6 +376,7 @@ window.onload = () => {
     getWindowWidth();
     disableLinks(currentPage);
   } else if (currentPage === 'contact') {
+    main.style.height = '100%';
     disableLinks(currentPage);
   }
 };
@@ -403,6 +409,9 @@ window.onscroll = () => {
       presentation = !presentation;
       const index = parseInt(cardWrap.getAttribute('data-index'));
       scrollTo(0, getTopWrapHeight());
+      setTimeout(() => {
+        showFooter();
+      }, 2600);
       setTimeout(() => {
         document.body.removeAttribute('style');
         document.documentElement.removeAttribute('style');
@@ -480,7 +489,6 @@ topMenu.addEventListener('click', (e) => {
     burgBottom.style.transform = 'rotate(0deg) translate(0, 0)';
     burgerText.style.opacity = '1';
     setTimeout(() => {
-      // cardWrapTest.removeAttribute('style');
       burgerMenu.removeAttribute('style');
       burgMid.removeAttribute('style');
     }, 900);
@@ -518,6 +526,9 @@ if (arrowDown) {
       presentation = !presentation;
       const index = parseInt(cardWrap.getAttribute('data-index'));
       scrollTo(0, (getTopWrapHeight() + 100));
+      setTimeout(() => {
+        showFooter();
+      }, 2600);
       setTimeout(() => {
         document.body.removeAttribute('style');
         document.documentElement.removeAttribute('style');
