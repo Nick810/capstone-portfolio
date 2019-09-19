@@ -40,6 +40,9 @@ label {
 }
 
 input {
+  -webkit-appearance: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   outline: none;
   &::placeholder {
     text-align: right;
