@@ -406,9 +406,10 @@ window.onscroll = () => {
       document.body.style.overflow = 'hidden';
       document.body.style.position = 'relative';
       arrowDown.style.opacity = '0';
+      arrowDown.parentElement.removeChild(arrowDown.parentElement.childNodes[13]);
       presentation = !presentation;
       const index = parseInt(cardWrap.getAttribute('data-index'));
-      scrollTo(0, getTopWrapHeight());
+      scrollTo(0, (getTopWrapHeight() + 100));
       setTimeout(() => {
         showFooter();
       }, 2600);
@@ -518,11 +519,11 @@ topMenu.addEventListener('click', (e) => {
 if (arrowDown) {
   arrowDown.addEventListener('click', () => {
     if (cardWrap.children.length === 0 && presentation === false) {
-      arrowDown.style.opacity = '0';
-      arrowDown.pointerEvents = 'none';
       document.documentElement.style.background = 'hidden';
       document.body.style.overflow = 'hidden';
       document.body.style.position = 'relative';
+      arrowDown.style.opacity = '0';
+      arrowDown.parentElement.removeChild(arrowDown.parentElement.childNodes[13]);
       presentation = !presentation;
       const index = parseInt(cardWrap.getAttribute('data-index'));
       scrollTo(0, (getTopWrapHeight() + 100));

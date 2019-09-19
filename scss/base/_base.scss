@@ -2,10 +2,6 @@
 //  Base Styles
 // ======================================
 
-* {
-  // border: 1px solid blue;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -27,7 +23,7 @@ p {
 }
 
 form {
-   -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 legend {
@@ -43,21 +39,25 @@ input {
   -webkit-appearance: none;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -webkit-border-radius: 0;
   outline: none;
   &::placeholder {
     text-align: right;
     color: $error-color;
   }
   &[type="text"] {
+    -webkit-border-radius: 0;
     -webkit-appearance: none;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
   &[type="email"] {
+    -webkit-border-radius: 0;
     -webkit-appearance: none;
   }
   &[type="number"] {
+    -webkit-border-radius: 0;
     -webkit-appearance: none;
   }
 }
@@ -68,6 +68,7 @@ select {
 }
 
 textarea {
+  -webkit-border-radius: 0;
   -webkit-appearance: none;
   outline: none;
   resize: none;
