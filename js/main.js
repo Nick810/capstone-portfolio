@@ -9,6 +9,7 @@ const topMenu = document.getElementById('top-menu');
 const fixedTop = document.getElementById('fixed-top');
 const mobileNav = document.getElementById('mobile-nav');
 const mobileNavChildren = document.querySelectorAll('.container__mobile-nav-links');
+const main = document.getElementById('main');
 const arrowDown = document.getElementById('arrow-down');
 const cardWrapTest = document.getElementById('card-wrap-test');
 const cardWrap = document.getElementById('card-wrap');
@@ -273,8 +274,8 @@ function generatePresHTML(index) {
   cardWrap.style.transform = 'translateY(0)';
   cardWrap.style.opacity = '1';
   setTimeout(() => {
-    // cardWrap.firstElementChild.firstElementChild.style.boxShadow = '0 0 30px 3px rgba(0,0,0,0.75)';
-  }, 1100);
+    cardWrap.firstElementChild.firstElementChild.style.boxShadow = '0 0 30px 3px rgba(0,0,0,0.75)';
+  }, 1400);
   setTimeout(() => {
     cardWrap.firstElementChild.firstElementChild.firstElementChild.style.opacity = '1';
   }, 900);
@@ -395,14 +396,21 @@ window.onscroll = () => {
   const currentPage = document.body.getAttribute('data-page');
   if (currentPage === 'home') {
     if (scroll > (getTopWrapHeight() + 100)  && presentation === false) {
+      document.documentElement.style.background = 'hidden';
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'relative';
       arrowDown.style.opacity = '0';
-      arrowDown.pointerEvents = 'none';
       presentation = !presentation;
       const index = parseInt(cardWrap.getAttribute('data-index'));
       scrollTo(0, getTopWrapHeight());
       setTimeout(() => {
+        document.body.removeAttribute('style');
+        document.documentElement.removeAttribute('style');
+      }, 2300);
+      setTimeout(() => {
         const mainCardHeight = String(getMainCardHeight()) + 'px';
         cardWrapTest.style.height = mainCardHeight;
+        main.style.height = '100%';
       }, 680);
       setTimeout(() => {
         generatePresHTML(index);
@@ -517,6 +525,7 @@ if (arrowDown) {
       setTimeout(() => {
         const mainCardHeight = String(getMainCardHeight()) + 'px';
         cardWrapTest.style.height = '100%';
+        main.style.height = '100%';
       }, 680);
       setTimeout(() => {
         generatePresHTML(index);

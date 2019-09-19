@@ -94,6 +94,7 @@
     }
   }
   &__main {
+    height: 300vh;
     background: $primary-color;
     padding: 79px em(12) 0 em(12);
     &-card {
@@ -115,8 +116,6 @@
   }
   &__footer {
     background: $primary-color;
-    position: absolute;
-    width: 100%;
     text-align: center;
     transition: all 1s ease-out;
     @include media-q(large) {
@@ -267,7 +266,7 @@
 }
 
 #card-wrap-test {
-  height: 300vh;
+  height: 100%;
   transition: all 1s ease-out;
 }
 
