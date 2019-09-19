@@ -385,7 +385,8 @@ window.onresize = () => {
   const currentPage = document.body.getAttribute('data-page');
   if (currentPage === 'home') {
     if (cardWrapTest.firstElementChild.childElementCount === 1) {
-      cardWrapTest.style.height = getMainCardHeight();
+//       cardWrapTest.style.height = getMainCardHeight();
+      cardWrapTest.style.height = '100%';
       cardWrapTest.firstElementChild.style.height = '100%';
     }
   }
@@ -419,7 +420,8 @@ window.onscroll = () => {
       }, 2300);
       setTimeout(() => {
         const mainCardHeight = String(getMainCardHeight()) + 'px';
-        cardWrapTest.style.height = mainCardHeight;
+//         cardWrapTest.style.height = mainCardHeight;
+          cardWrapTest.style.height = '100%';
         main.style.height = '100%';
       }, 680);
       setTimeout(() => {
@@ -607,7 +609,8 @@ window.addEventListener('click', (e) => {
   } else if (e.target === next && cardWrapTest.getAttribute('style') === 'height: 100%;') {
     e.target.style.pointerEvents = 'none';
     const mainCardHeight = String(getMainCardHeight()) + 'px';
-    cardWrap.style.height = mainCardHeight;
+//     cardWrap.style.height = mainCardHeight;
+      cardWrap.style.height = '100%';
     switchPres();
     setTimeout(() => {
       indexCounter += 1;
@@ -629,7 +632,8 @@ window.addEventListener('click', (e) => {
   } else if (e.target === prev && cardWrapTest.getAttribute('style') === 'height: 100%;') {
     e.target.style.pointerEvents = 'none';
     const mainCardHeight = String(getMainCardHeight()) + 'px';
-    cardWrap.style.height = mainCardHeight;
+//     cardWrap.style.height = mainCardHeight;
+      cardWrap.style.height = '100%';
     switchPres();
     setTimeout(() => {
       indexCounter -= 1;
@@ -648,19 +652,6 @@ window.addEventListener('click', (e) => {
     generateVideo(indexCounter);
   }
 });
-// // rename please
-// window.addEventListener('click', (e) => {
-//   const video = e.target.closest('.text-overlay');
-//   if (e.target === video) {
-//     generateVideo(indexCounter);
-//   }
-// });
-//
-// window.addEventListener('click', (e) => {
-//   if (e.target.id === 'close-video') {
-//     removeVideo();
-//   }
-// });
 
 window.addEventListener('touchstart', (e) => {
   const next = e.target.closest('#next');
@@ -699,7 +690,8 @@ window.addEventListener('touchstart', (e) => {
   } else if (e.target === prev && cardWrapTest.getAttribute('style') === 'height: 100%;') {
     e.target.style.pointerEvents = 'none';
     const mainCardHeight = String(getMainCardHeight()) + 'px';
-    cardWrap.style.height = mainCardHeight;
+//     cardWrap.style.height = mainCardHeight;
+      cardWrap.style.height = '100%';
     switchPres();
     setTimeout(() => {
       indexCounter -= 1;
@@ -737,6 +729,6 @@ if (select) {
 
 if (viewWork) {
   viewWork.addEventListener('click', ()=> {
-    window.location.href = 'file:///Users/NICK/Documents/GitHub/Front-End-Development/capstone-portfolio-project9/index.html#card-wrap-test';
+    window.location.href = 'https://nick810.github.io/capstone-portfolio/';
   });
 }
