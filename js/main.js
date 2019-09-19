@@ -537,15 +537,11 @@ if (arrowDown) {
         document.documentElement.removeAttribute('style');
       }, 2300);
       setTimeout(() => {
-        const mainCardHeight = String(getMainCardHeight()) + 'px';
+        generatePresHTML(index);
+        cardWrapTest.firstElementChild.style.height = '100%';
         cardWrapTest.style.height = '100%';
         main.style.height = '100%';
-      }, 680);
-      setTimeout(() => {
-        generatePresHTML(index);
       }, 670);
-    } else {
-      window.scrollTo(0, (getTopWrapHeight() + 60));
     }
   });
 }

@@ -97,8 +97,11 @@
     height: 300vh;
     background: $primary-color;
     padding: 79px em(12) 0 em(12);
+    transition: .67s ease-out;
     &-card {
+      transition: .67s ease-out;
       &-inner {
+        transition: .67s ease-out;
         text-align: center;
         @include flex(flex, column, null, null, null);
         @include media-q(large) {
@@ -194,7 +197,7 @@
   margin-bottom: em(55);
   @include media-q(large) {
     margin-left: em(20);
-    width: 180%;
+    max-width: em(1280);
     height: 100%;
   }
 }
