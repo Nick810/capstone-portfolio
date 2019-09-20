@@ -7,7 +7,6 @@
     background: #464866;
     border-radius: em(16);
     color: $white;
-    // @include flex(flex, column, null, null, null);
     padding: em(40) em(20) em(63) em(20);
     &-input {
       width: 100%;
@@ -32,11 +31,5 @@
   }
   &-input {
     border-color: $error-color;
-  }
-}
-
-#email {
-  @include media-q(large) {
-    height: em(29);
   }
 }

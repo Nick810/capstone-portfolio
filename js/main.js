@@ -28,7 +28,6 @@ const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
 const textareaInput = document.getElementById('message');
 const submitButton= document.getElementById('form-button');
-const viewWork = document.getElementById('view-work');
 const door = document.querySelector('.container__door');
 const box1 = document.querySelector('.box1');
 const box2 = document.querySelector('.box2');
@@ -180,6 +179,11 @@ function doorOpen() {
 function refreshingPage() {
   window.scrollTo(0, 0);
   mainWrap.style.opacity = '1';
+}
+
+function showFooter() {
+  footerFade[0].style.transform = 'translateY(0)';
+  footerFade[0].style.opacity = '1';
 }
 
 
@@ -371,6 +375,7 @@ window.onload = () => {
     getWindowWidth();
     disableLinks(currentPage);
   } else if (currentPage === 'contact') {
+    main.style.height = '100%';
     disableLinks(currentPage);
   }
 };
@@ -401,16 +406,21 @@ window.onscroll = () => {
       document.body.style.overflow = 'hidden';
       document.body.style.position = 'relative';
       arrowDown.style.opacity = '0';
+      arrowDown.parentElement.removeChild(arrowDown.parentElement.childNodes[9]);
       presentation = !presentation;
       const index = parseInt(cardWrap.getAttribute('data-index'));
-      scrollTo(0, getTopWrapHeight());
+      scrollTo(0, (getTopWrapHeight() + 100));
+      setTimeout(() => {
+        showFooter();
+      }, 2600);
       setTimeout(() => {
         document.body.removeAttribute('style');
         document.documentElement.removeAttribute('style');
       }, 2300);
       setTimeout(() => {
         const mainCardHeight = String(getMainCardHeight()) + 'px';
-        cardWrapTest.style.height = mainCardHeight;
+//         cardWrapTest.style.height = mainCardHeight;
+          cardWrapTest.style.height = '100%';
         main.style.height = '100%';
       }, 680);
       setTimeout(() => {
@@ -481,7 +491,6 @@ topMenu.addEventListener('click', (e) => {
     burgBottom.style.transform = 'rotate(0deg) translate(0, 0)';
     burgerText.style.opacity = '1';
     setTimeout(() => {
-      // cardWrapTest.removeAttribute('style');
       burgerMenu.removeAttribute('style');
       burgMid.removeAttribute('style');
     }, 900);
@@ -511,28 +520,27 @@ topMenu.addEventListener('click', (e) => {
 if (arrowDown) {
   arrowDown.addEventListener('click', () => {
     if (cardWrap.children.length === 0 && presentation === false) {
-      arrowDown.style.opacity = '0';
-      arrowDown.pointerEvents = 'none';
       document.documentElement.style.background = 'hidden';
       document.body.style.overflow = 'hidden';
       document.body.style.position = 'relative';
+      arrowDown.style.opacity = '0';
+      arrowDown.parentElement.removeChild(arrowDown.parentElement.childNodes[9]);
       presentation = !presentation;
       const index = parseInt(cardWrap.getAttribute('data-index'));
       scrollTo(0, (getTopWrapHeight() + 100));
+      setTimeout(() => {
+        showFooter();
+      }, 2600);
       setTimeout(() => {
         document.body.removeAttribute('style');
         document.documentElement.removeAttribute('style');
       }, 2300);
       setTimeout(() => {
-        const mainCardHeight = String(getMainCardHeight()) + 'px';
+        generatePresHTML(index);
+        cardWrapTest.firstElementChild.style.height = '100%';
         cardWrapTest.style.height = '100%';
         main.style.height = '100%';
-      }, 680);
-      setTimeout(() => {
-        generatePresHTML(index);
       }, 670);
-    } else {
-      window.scrollTo(0, (getTopWrapHeight() + 60));
     }
   });
 }
@@ -596,7 +604,8 @@ window.addEventListener('click', (e) => {
   } else if (e.target === next && cardWrapTest.getAttribute('style') === 'height: 100%;') {
     e.target.style.pointerEvents = 'none';
     const mainCardHeight = String(getMainCardHeight()) + 'px';
-    cardWrap.style.height = mainCardHeight;
+//     cardWrap.style.height = mainCardHeight;
+      cardWrap.style.height = '100%';
     switchPres();
     setTimeout(() => {
       indexCounter += 1;
@@ -618,7 +627,8 @@ window.addEventListener('click', (e) => {
   } else if (e.target === prev && cardWrapTest.getAttribute('style') === 'height: 100%;') {
     e.target.style.pointerEvents = 'none';
     const mainCardHeight = String(getMainCardHeight()) + 'px';
-    cardWrap.style.height = mainCardHeight;
+//     cardWrap.style.height = mainCardHeight;
+      cardWrap.style.height = '100%';
     switchPres();
     setTimeout(() => {
       indexCounter -= 1;
@@ -637,19 +647,6 @@ window.addEventListener('click', (e) => {
     generateVideo(indexCounter);
   }
 });
-// // rename please
-// window.addEventListener('click', (e) => {
-//   const video = e.target.closest('.text-overlay');
-//   if (e.target === video) {
-//     generateVideo(indexCounter);
-//   }
-// });
-//
-// window.addEventListener('click', (e) => {
-//   if (e.target.id === 'close-video') {
-//     removeVideo();
-//   }
-// });
 
 window.addEventListener('touchstart', (e) => {
   const next = e.target.closest('#next');
@@ -688,7 +685,8 @@ window.addEventListener('touchstart', (e) => {
   } else if (e.target === prev && cardWrapTest.getAttribute('style') === 'height: 100%;') {
     e.target.style.pointerEvents = 'none';
     const mainCardHeight = String(getMainCardHeight()) + 'px';
-    cardWrap.style.height = mainCardHeight;
+//     cardWrap.style.height = mainCardHeight;
+      cardWrap.style.height = '100%';
     switchPres();
     setTimeout(() => {
       indexCounter -= 1;
@@ -721,11 +719,5 @@ if (select) {
   select.addEventListener('change', () => {
     const userChoice = select.selectedIndex;
     localStorage.setItem('heard about me', userChoice);
-  });
-}
-
-if (viewWork) {
-  viewWork.addEventListener('click', ()=> {
-    window.location.href = 'http://nick810.github.io/capstone-portfolio';
   });
 }
