@@ -1,0 +1,30 @@
+// ======================================
+//  Variables
+// ======================================
+
+// Colors
+$primary-color: #25274D;
+$focus-color: darken($primary-color, 5%);
+$secondary-color: #6DAEDB;
+$secondary-color-accent: lighten($secondary-color, 5%);
+$white: #f6f7f8;
+$success: #81C98F;
+$text-color: #7f7f7f;
+$text-accented: lighten($text-color, 40%);
+$user-input-color: #b2b2b2;
+$border-color: #bec1c3;
+$button-color: #3cf;
+$button-accent: darken($button-color, 10%);
+$error-color: #8b0000;
+
+
+// layout
+$max-width: 1150px;
+
+// Fonts
+$primary-font: 'Work Sans', sans-serif;
+$default-font-size: 16;
+
+// Breakpoints
+$break-m: 768px;
+$break-l: 1024px;

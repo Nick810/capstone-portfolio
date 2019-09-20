@@ -1,0 +1,106 @@
+// ======================================
+//  Icons
+// ======================================
+
+.icon {
+  &-burger {
+    width: 100%;
+    height: em(4);
+    background: $white;
+    border-radius: em(10);
+    &.burg-top {
+      transition: all 0.7s;
+      transition-timing-function: cubic-bezier(.99,.46,.37,1);
+      margin: em(20) 0 0 0;
+    }
+    &.burg-middle {
+      transition: opacity 0.3s;
+      margin: em(5) 0;
+    }
+    &.burg-bottom {
+      transition: all 0.7s;
+      transition-timing-function: cubic-bezier(.99,.46,.37,1);
+    }
+  }
+  &-skill {
+    width: em(40);
+    margin: 0 em(10);
+  }
+  &__social {
+    width: em(45);
+    margin: 0 em(15);
+    &.sidebar {
+      width: em(30);
+      margin: em(15) 0;
+    }
+  }
+  &__arrow-down {
+    width: em(34);
+    height: em(40);
+    display: block;
+    margin: em(21) auto 0 auto;
+    cursor: pointer;
+    transition: all 0.7s ease-out;
+    animation: updown 1s infinite alternate;
+    &.path {
+      fill: $white;
+    }
+  }
+}
+
+.social-links {
+  transition: fill 0.3s ease-out;
+  &:hover {
+    fill: #2E9CCA;
+  }
+}
+
+.light-bulb {
+  position: fixed;
+  z-index: 9000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .7s ease-out;
+  width: em(80);
+}
+
+.rotate,
+.rotate2,
+.rotate3 {
+  /* transition: 2s ease-out; */
+  animation: gear 4s linear infinite;
+  animation-play-state: running;
+  transform-origin: 50% 40%;
+}
+
+.light-radiate {
+  animation: pulse .7s .1s;
+  animation-play-state: running;
+}
+
+.light {
+  animation: flicker 1s .3s linear infinite;
+}
+
+.light-radiate1 {
+  animation: pulse 1s .3s infinite;
+}
+.light-radiate2 {
+  animation: pulse .7s .7s infinite;
+}
+.light-radiate3 {
+  animation: pulse .7s 1.1s infinite;
+}
+.light-radiate4 {
+  animation: pulse .7s 1.5s infinite;
+}
+.light-radiate5 {
+  animation: pulse .7s 1.9s infinite;
+}
+.light-radiate6 {
+  animation: pulse .7s 2.3s infinite;
+}
+.light-radiate7 {
+  animation: pulse .7s 2.7s infinite;
+}

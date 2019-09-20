@@ -7,8 +7,8 @@
   <link href="css/styles.css" rel="stylesheet">
   </head>
 
-<body data-page="home">
-  <div class="container__main-wrap" id="main-wrap">
+<body data-page="contact">
+  <div class="container__grid">
     <div class="container__fixed-top" id="fixed-top">
       <header class="container__header" id="top-menu">
         <h1 class="text-logo"><a href="https://nick810.github.io/capstone-portfolio/">NBsDesign</a></h1>
@@ -33,37 +33,65 @@
     </nav>
 
     <main class="container__main" id="main">
-      <div class="container__inner">
-        <div id="top-wrap">
-          <h2 class="text-main">Hi.<br>I Am Nick<br></h2>
-          <p class="text-main-paragragh">a web designer<br>front-end developer <br>based in Bangkok</p>
-          <p class="text-main-paragragh second">I recently just finished "Front End Web Development Techdegree" at teamtreehouse</p>
-          <p class="text-main-paragragh"><a class="third" href="https://github.com/Nick810">Check out my projects</a></p>
-
-          <svg class="icon__arrow-down" version="1.1" id="arrow-down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          	 width="451.847px" height="451.847px" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;"
-          	 xml:space="preserve">
-          	<g class="icon__arrow-down path">
-          		<path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
-          			c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
-          			c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
-          	</g>
-          </svg>
+      <div class="container__inner fade-out">
+        <div class="container__contact-heading">
+          <h2 class="contact-heading">Please fill in your information below</h2>
+          <p>and let's get started!</p>
         </div>
 
-        <div id="card-wrap-test">
-          <div class="container__main-card" id="card-wrap" data-index="0"></div>
-        </div>
+        <div class="container__form">
+          <form class="form__contact fade-out" id="contact-form">
+            <h3 class="contact-legend">CONTACT FORM</h3>
 
+            <div class="container__form-group">
+              <div class="input-wrap">
+                <label class="form-label" for="name">FULL NAME*</label>
+                <input required type="text" class="form__contact-input" id="name" name="user_name" onfocus="inputOnFocus(this)">
+              </div>
+
+              <div class="input-wrap">
+                <label class="form-label" for="email">EMAIL ADDRESS*</label>
+                <input required type="email" class="form__contact-input" id="email" name="user_email" onfocus="inputOnFocus(this)">
+              </div>
+            </div>
+
+            <div class="container__form-group">
+              <div class="input-wrap">
+                <label class="form-label" for="phone">PHONE NUMBER (OPTIONAL)</label>
+                <input type="tel" class="form__contact-input" id="phone" name="user_phone" maxlength="15" onfocus="inputOnFocus(this)" >
+              </div>
+
+              <div class="input-wrap">
+                <label class="form-label">HOW DID YOU HEAR ABOUT ME?</label>
+                <select class="form__contact-input select" id="select" onfocus="inputOnFocus(this)">
+                  <option value="Choose One" disabled selected>Choose One</option>
+                  <option>Google</option>
+                  <option>Facebook</option>
+                  <option>Twitter</option>
+                  <option>Referral</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="container__form-textarea">
+              <label class="form-label" for="message">MESSAGE*</label>
+              <textarea class="form__contact-input" id="message" name="user_msg" onfocus="inputOnFocus(this)"></textarea>
+            </div>
+
+            <div class="container__form-button">
+              <button class="button-primary contact" id="form-button" type="submit">SUBMIT</button>
+            </div>
+
+          </form>
+        </div>
       </div>
     </main>
 
     <footer class="container__footer">
-      <div class="container__inner fade-out footer-hidden">
-        <h2 class="text-main footer">Do you <br>have any projects <br>in mind?</h2>
+      <div class="container__inner fade-out" id="footer">
         <div class="container__footer-text-top">
-          <h3 class="footer-heading">Let's get to work shall we?</h3>
-          <a class="button-primary" href="mailto:cbnickp@gmail.com?subject=Web_Development_Queries">MESSAGE ME</a>
+          <h3 class="contact-footer-heading">Let's get to work shall we?</h3>
+          <a class="button-primary" href="mailto:cbnickp@gmail.com?subject=Web_Development_Queries">HIRE ME</a>
         </div>
       </div>
 
@@ -96,14 +124,13 @@
               <path class="social-links" fill="#fff" d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z"/>
             </a>
           </svg>
-          <a class="text-phone-num" href="tel:+6696-242-9939">TEL: +6696-242-9939</a>
+          <p class="text-phone-num"><a href="tel:+6696-242-9939">TEL: +6696-242-9939</a></p>
           <p class="text-copyright">&copy; Copyright 2019 Nick B. <br>All rights reserved</p>
         </div>
       </div>
     </footer>
 
   </div>
-  <div class="container__modal-video hidden" id="modal-video"></div>
   <div class="container__door">
     <div class="box1"></div>
     <div class="box2"></div>
@@ -230,9 +257,8 @@
      M317.317,457.806c0,2.439-2.061,4.5-4.5,4.5c-13.24,0-101.138,0-113.632,0c-2.439,0-4.5-2.061-4.5-4.5v-10.691
     c0-2.439,2.061-4.5,4.5-4.5h113.632c2.439,0,4.5,2.061,4.5,4.5V457.806z"/>
   </svg>
-  <script src="https://player.vimeo.com/api/player.js"></script>
-  <script src="js/main.js"></script>
 
+  <script src="js/main.js"></script>
 </body>
 
 </html>

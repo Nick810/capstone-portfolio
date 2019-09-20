@@ -34,6 +34,13 @@
         line-height: 2.4;
         margin-top: em(48);
       }
+      &.third {
+        color: $button-color;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
     &-small {
       margin: em(48) 0;
@@ -112,12 +119,4 @@
 
 .contact-legend {
   margin-bottom: em(30);
-}
-
-.third {
-  color: $button-color;
-  cursor: pointer;
-  &:hover {
-    text-decoration: underline;
-  }
 }
