@@ -54,6 +54,7 @@
     }
   }
   &-phone-num {
+    display: block;
     margin-top: em(15);
     &:hover {
       text-decoration: underline;
@@ -113,6 +114,9 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  // transform: translate(-50%, -100%);
   z-index: 9001;
+}
+
+.contact-legend {
+  margin-bottom: em(30);
 }

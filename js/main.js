@@ -406,7 +406,7 @@ window.onscroll = () => {
       document.body.style.overflow = 'hidden';
       document.body.style.position = 'relative';
       arrowDown.style.opacity = '0';
-      arrowDown.parentElement.removeChild(arrowDown.parentElement.childNodes[13]);
+      arrowDown.parentElement.removeChild(arrowDown.parentElement.childNodes[9]);
       presentation = !presentation;
       const index = parseInt(cardWrap.getAttribute('data-index'));
       scrollTo(0, (getTopWrapHeight() + 100));
@@ -524,7 +524,7 @@ if (arrowDown) {
       document.body.style.overflow = 'hidden';
       document.body.style.position = 'relative';
       arrowDown.style.opacity = '0';
-      arrowDown.parentElement.removeChild(arrowDown.parentElement.childNodes[13]);
+      arrowDown.parentElement.removeChild(arrowDown.parentElement.childNodes[9]);
       presentation = !presentation;
       const index = parseInt(cardWrap.getAttribute('data-index'));
       scrollTo(0, (getTopWrapHeight() + 100));
