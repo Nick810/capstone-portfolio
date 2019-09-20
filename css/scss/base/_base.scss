@@ -1,0 +1,81 @@
+// ======================================
+//  Base Styles
+// ======================================
+
+html {
+  scroll-behavior: smooth;
+}
+
+h2,
+h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+p {
+  font-size: em(20);
+  color: $white;
+  margin: 0;
+}
+
+form {
+  -webkit-appearance: none;
+}
+
+legend {
+  font-size: em(20);
+  margin-bottom: em(20);
+}
+
+label {
+  transition: font-size 0.4s ease-out;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-border-radius: 0;
+  outline: none;
+  &::placeholder {
+    text-align: right;
+    color: $error-color;
+  }
+  &[type="text"] {
+    -webkit-border-radius: 0;
+    -webkit-appearance: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  &[type="email"] {
+    -webkit-border-radius: 0;
+    -webkit-appearance: none;
+  }
+  &[type="tel"] {
+    -webkit-border-radius: 0;
+    -webkit-appearance: none;
+  }
+}
+
+select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+textarea {
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+  outline: none;
+  resize: none;
+  padding-top: em(10);
+  padding-bottom: 0;
+  &::placeholder {
+    text-align: right;
+    color: $error-color;
+  }
+}

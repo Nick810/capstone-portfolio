@@ -1,0 +1,17 @@
+// ======================================
+//  Images
+// ======================================
+
+.image-test {
+  object-fit: contain;
+  max-width: 100%;
+}
+
+.image {
+  &__project {
+    max-width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+    vertical-align: bottom;
+  }
+}

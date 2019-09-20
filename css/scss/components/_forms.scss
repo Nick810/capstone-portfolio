@@ -1,0 +1,35 @@
+// ======================================
+//  Form
+// ======================================
+
+.form {
+  &__contact {
+    background: #464866;
+    border-radius: em(16);
+    color: $white;
+    padding: em(40) em(20) em(63) em(20);
+    &-input {
+      width: 100%;
+      border: none;
+      border-bottom: em(3) solid #9c9c9c;
+      background: transparent;
+      margin-bottom: em(40);
+      height: em(34);
+    }
+  }
+}
+
+.select {
+  outline: none;
+  height: 39px;
+  border-radius: 0;
+}
+
+.invalid {
+  &-label {
+    color: $error-color;
+  }
+  &-input {
+    border-color: $error-color;
+  }
+}

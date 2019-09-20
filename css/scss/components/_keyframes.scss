@@ -1,0 +1,42 @@
+// ======================================
+//  Keyframes
+// ======================================
+
+@keyframes updown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(em(-7));
+  }
+}
+
+@keyframes gear {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  75% {
+    fill: #464866;;
+  }
+}
+
+@keyframes flicker {
+  25% {
+    fill: #464866;;
+  }
+  40% {
+    fill: #F9B428;
+  }
+  50% {
+    fill: #464866;;
+  }
+   60% {
+     fill: #F9B428;
+   }
+}
